@@ -53,6 +53,7 @@ dependencies {
 
     implementation 'commons-cli:commons-cli:+'
     implementation 'com.diogonunes:JColor:+'
+    implementation 'org.jsoup:jsoup:+'
 
     // https://mvnrepository.com/artifact/org.graalvm.sdk/graal-sdk
     implementation 'org.graalvm.sdk:graal-sdk:22.+'
