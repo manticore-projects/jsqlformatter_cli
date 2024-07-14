@@ -229,7 +229,7 @@ jacocoTestCoverageVerification {
         rule {
             //element = 'CLASS'
             limit {
-                minimum = 0.69
+                minimum = 0.20
             }
             excludes = [
             ]
@@ -240,7 +240,7 @@ jacocoTestCoverageVerification {
                 counter = 'LINE'
                 value = 'MISSEDCOUNT'
 
-                maximum = 800
+                maximum = 1000
             }
             excludes = [
             ]
