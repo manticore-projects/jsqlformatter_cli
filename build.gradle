@@ -3,7 +3,7 @@ import se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask
 
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version 'latest.release'
+    id 'com.gradleup.shadow' version 'latest.release'
     id 'maven-publish'
     id 'signing'
     id 'pmd'
