@@ -53,7 +53,7 @@ dependencies {
 
     implementation 'commons-cli:commons-cli:+'
     implementation 'com.diogonunes:JColor:+'
-    implementation 'org.jsoup:jsoup:+'
+    implementation 'org.jsoup:jsoup:1.18.1'
 
     // https://mvnrepository.com/artifact/org.graalvm.sdk/graal-sdk
     implementation 'org.graalvm.sdk:graal-sdk:22.+'
@@ -159,8 +159,7 @@ tasks.register('xmldoc', Javadoc) {
     )
 
     source = sourceSets.main.allJava
-    include("build/generated/javacc/net/sf/jsqlparser/parser/*.java" )
-    include("../JSQLParser/src/main/java/**/*.java")
+    classpath = sourceSets.main.runtimeClasspath
 
     title = "API $version"
     destinationDir = reporting.file("xmlDoclet")
@@ -175,7 +174,7 @@ tasks.register('xmldoc', Javadoc) {
     doLast {
         copy {
             from rstFile
-            into "${projectDir}/src/site/sphinx/"
+            into layout.projectDirectory.dir("src/site/sphinx/").asFile
         }
     }
 }
